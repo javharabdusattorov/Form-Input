@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="containerOne">
+        <div class="resultHeadingg"></div>
+      <div class="row mt-5">
+        <div class="col-md-6 offset-3">
+          <form class="form-group groupInForm">
+            <input
+              class="form-control input__val"
+              type="text"
+              maxlength="50"
+              placeholder="Max 50 simvol"
+            />
+            <div class="indicator-1">
+              <span></span>
+            </div>
+            <input
+              class="form-control input__val"
+              type="text"
+              maxlength="100"
+              placeholder="Max 100 simvol"
+            />
+            <div class="indicator-2">
+              <span></span>
+            </div>
+            <textarea
+              class="form-control input__val"
+              name="form-control"
+              id="form"
+              maxlength="500"
+              placeholder="Max 500 simbol"
+            ></textarea>
+            <div class="indicator-3">
+              <span></span>
+            </div>
+            <button class="btn btn-danger" id="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".form-control").on("keyup", function () {
+        let input = $(this).val();
+
+        let max = $(this).attr("maxlength");
+        let x = (input.length * 100) / max;
+
+        if (max == 50) {
+          $(".indicator-1 span").css("width", x + "%");
+        } else if (max == 100) {
+          $(".indicator-2 span").css("width", x + "%");
+        } else if (max == 500) {
+          $(".indicator-3 span").css("width", x + "%");
+        }
+        
+      });
+    </script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
