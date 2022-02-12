@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -14,42 +14,46 @@
     ></script>
   </head>
   <body>
-    <div class="containerOne">
-        <div class="resultHeadingg"></div>
+    <div class="container containerOne">
+        <div class="resultHeadingg"><h1>  </h1></div>
       <div class="row mt-5">
-        <div class="col-md-6 offset-3">
           <form class="form-group groupInForm">
             <input
-              class="form-control input__val"
+              class="form-control input__valOne"
               type="text"
               maxlength="50"
               placeholder="Max 50 simvol"
+              required
             />
             <div class="indicator-1">
               <span></span>
             </div>
+            
             <input
-              class="form-control input__val"
+              class="form-control input__valTwo"
               type="text"
               maxlength="100"
               placeholder="Max 100 simvol"
+              required
             />
             <div class="indicator-2">
               <span></span>
             </div>
+            
             <textarea
-              class="form-control input__val"
-              name="form-control"
-              id="form"
-              maxlength="500"
-              placeholder="Max 500 simbol"
-            ></textarea>
-            <div class="indicator-3">
-              <span></span>
-            </div>
+            class="form-control input__valThree"
+            name="form-control"
+            id="form"
+            maxlength="500"
+            placeholder="Max 500 simbol"
+            required
+          ></textarea>
+          <div class="indicator-3">
+            <span></span>
+          </div>
             <button class="btn btn-danger" id="btn">Submit</button>
           </form>
-        </div>
+        
       </div>
     </div>
 

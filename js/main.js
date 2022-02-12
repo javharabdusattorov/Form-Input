@@ -1,20 +1,36 @@
+'use strict';
+
 let elResultContainer = document.querySelector('.resultHeadingg');
 let elForm = document.querySelector('.groupInForm');
-let elInput = document.querySelector('.input__val');
+let elInputOne = document.querySelector('.input__valOne');
+let elInputTwo = document.querySelector('.input__valTwo');
+let elInputThree = document.querySelector('.input__valThree');
+let elresultHeading = document.querySelector('h1')
 
 
 elForm.addEventListener('submit', function(evt) {
     evt.preventDefault();
-    let inputValue = elInput.value;
+    // Value
+    let inputValueOne = elInputOne.value;
+    let inputValueTwo = elInputTwo.value;
+    let inputValueThree = elInputThree.value;
 
-    let resultHeading = document.createElement('h1');
-    elResultContainer.appendChild(resultHeading);
-    resultHeading.setAttribute('class', 'resultHeading');
-    resultHeading.textContent = 'Welcome to our little Site!'
+    elresultHeading.setAttribute('class', 'resultHeading');
+    elresultHeading.textContent = 'Welcome to our little Site!';
 
-    let resultBox = document.createElement('div');
-    elForm.appendChild(resultBox);
-    resultBox.setAttribute('class', 'resultBox');
+    // Result Boxes
+    let resultBoxOne = document.createElement('div');
+    let resultBoxTwo = document.createElement('div');
+    let resultBoxThree = document.createElement('div');
+    elForm.appendChild(resultBoxOne);
+    elForm.appendChild(resultBoxTwo);
+    elForm.appendChild(resultBoxThree);
+    resultBoxOne.setAttribute('class', 'resultBoxOne');
+    resultBoxTwo.setAttribute('class', 'resultBoxTwo');
+    resultBoxThree.setAttribute('class', 'resultBoxThree');
 
-    resultBox.textContent = inputValue;
+    // TextContent
+    resultBoxOne.textContent = inputValueOne;
+    resultBoxTwo.textContent = inputValueTwo;
+    resultBoxThree.textContent = inputValueThree;
 })

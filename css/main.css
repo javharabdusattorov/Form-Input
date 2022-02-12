@@ -6,6 +6,10 @@
     text-decoration: none !important;
 }
 
+.containerOne {
+    padding: 0 150px;
+}
+
 input, textarea {
     font-size: 24px;
     color: black;
@@ -40,11 +44,11 @@ span {
     margin: 15px 0;
 }
 
-.resultBox {
+.resultBoxOne, .resultBoxTwo, .resultBoxThree {
     width: 100%;
     border: 3px solid white;
     border-radius: 10px;
-    padding: 22px 8px 24px 10px;
+    padding: 15px 8px 14px 10px;
     background: linear-gradient(to right, rgb(74, 164, 255), rgb(18, 127, 236));
     transition: all 0.4s ease;
     margin: 10px 0;
@@ -52,7 +56,23 @@ span {
     color: crimson;
 }
 
-.resultBox:hover {
+.resultBoxOne:hover {
     background: linear-gradient(to left, rgb(74, 164, 255), rgb(18, 127, 236));
     border: 3px solid red;
+}
+
+.resultBoxTwo:hover {
+    background: linear-gradient(to left, rgb(74, 164, 255), rgb(18, 127, 236));
+    border: 3px solid red;
+}
+
+.resultBoxThree:hover {
+    background: linear-gradient(to left, rgb(74, 164, 255), rgb(18, 127, 236));
+    border: 3px solid red;
+}
+
+@media(max-width:767px) {
+    .containerOne {
+        padding: 0;
+    }
 }
